@@ -1,0 +1,75 @@
+@use '../global/vars' as *;
+
+.footer {
+    background-color: #F3F3F3;
+    border: 1px solid #EBEBEB;
+    color: $dark-color;
+    font-weight: 500;
+
+    &__top {
+        padding-top: 54px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__menu {}
+
+    &__menu-list {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 14px 87px;
+    }
+
+    &__menu-item {}
+
+    &__menu-link {
+        transition: color .3s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        column-gap: 100px;
+        align-items: flex-start;
+    }
+
+    &__schedule {
+        padding-left: 25px;
+    }
+
+    &__address {
+        max-width: 180px;
+    }
+
+    &__phones {
+        line-height: 1.4;
+        padding-left: 25px;
+
+        &::before {
+            width: 16px;
+            height: 16px;
+        }
+
+        .phone-list__item {
+            padding-left: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__copy {
+        font-size: 14px;
+        font-weight: 400;
+        padding-block: 23px;
+        text-align: right;
+        color: #5c5c5c;
+    }
+}
