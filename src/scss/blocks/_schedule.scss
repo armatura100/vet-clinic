@@ -1,0 +1,25 @@
+@use '../global/vars' as *;
+
+.schedule {
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 14px;
+        aspect-ratio: 1;
+
+        background-image: url('../../img/icons/schedule.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        left: 0;
+        top: 2px;
+    }
+
+    &__item {
+        span {
+            font-weight: 600;
+        }
+    }
+}

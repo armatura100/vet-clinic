@@ -1,0 +1,48 @@
+@use '../global/vars' as *;
+
+.phone-list {
+    padding-left: 22px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 13px;
+        aspect-ratio: 1;
+
+        background-image: url('../img/icons/phone.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        left: 0;
+        top: 2px;
+    }
+
+    &__item:not(:first-child) {
+        padding-left: 13px;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 4px;
+            aspect-ratio: 1;
+            background-color: $accent-color;
+            border-radius: 50%;
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+        }
+    }
+
+    &__link {
+        white-space: nowrap;
+        transition: color .3s;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}

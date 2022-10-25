@@ -10,6 +10,10 @@ body {
     line-height: 1.25;
     font-weight: 400;
     color: $text-color;
+
+    &.lock {
+        overflow: hidden;
+    }
 }
 
 .container {
@@ -21,92 +25,5 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100%;
-}
-
-.schedule {
-    position: relative;
-
-    &::before {
-        content: '';
-        width: 14px;
-        aspect-ratio: 1;
-
-        background-image: url('../../img/icons/schedule.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-
-        position: absolute;
-        left: 0;
-        top: 2px;
-    }
-
-    &__item {
-        span {
-            font-weight: 600;
-        }
-    }
-}
-
-.address {
-    position: relative;
-    padding-left: 23px;
-
-    &::before {
-        content: '';
-        width: 14px;
-        height: 13px;
-        background-image: url('../../img/icons/house.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-
-        position: absolute;
-        left: 0;
-        top: 2px;
-    }
-}
-
-.phone-list {
-    padding-left: 22px;
-    position: relative;
-
-    &::before {
-        content: '';
-        position: absolute;
-        width: 13px;
-        aspect-ratio: 1;
-
-        background-image: url('../img/icons/phone.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-
-        position: absolute;
-        left: 0;
-        top: 2px;
-    }
-
-    &__item:not(:first-child) {
-        padding-left: 13px;
-        position: relative;
-
-        &::before {
-            content: '';
-            width: 4px;
-            aspect-ratio: 1;
-            background-color: $accent-color;
-            border-radius: 50%;
-
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 0;
-        }
-    }
-
-    &__link {
-        transition: color .3s;
-
-        &:hover {
-            color: $accent-color;
-        }
-    }
+    overflow-x: hidden;
 }

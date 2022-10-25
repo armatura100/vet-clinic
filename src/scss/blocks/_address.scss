@@ -1,0 +1,19 @@
+@use '../global/vars' as *;
+
+.address {
+    position: relative;
+    padding-left: 23px;
+
+    &::before {
+        content: '';
+        width: 14px;
+        height: 13px;
+        background-image: url('../../img/icons/house.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        left: 0;
+        top: 2px;
+    }
+}

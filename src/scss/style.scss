@@ -2,5 +2,10 @@
 @use 'global/reset';
 @use 'global/global';
 
+@use 'blocks/address';
+@use 'blocks/phone-list';
+@use 'blocks/phones-mobile';
+@use 'blocks/schedule';
+
 @use 'blocks/header';
 @use 'blocks/footer';

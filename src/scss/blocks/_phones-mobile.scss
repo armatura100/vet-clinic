@@ -1,0 +1,67 @@
+@use '../global/vars' as *;
+
+.phones-mobile {
+    display: none;
+
+    @media (max-width: 700px) {
+        position: relative;
+        display: block;
+        width: 17px;
+        height: 17px;
+
+        &__list {
+            font-size: 16px;
+            text-align: right;
+            color: #fff;
+            width: max-content;
+            background-color: $accent-color;
+            padding: 10px 20px;
+            border-radius: 5px;
+
+            position: absolute;
+            right: 0;
+            top: calc(100% + 10px);
+            z-index: 1;
+
+            transform: translateX(100%);
+            opacity: 0;
+            pointer-events: none;
+            transition: .3s;
+
+            &.active {
+                transform: none;
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+
+        &__item {
+            padding-left: 13px;
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+
+            &::before {
+                content: '';
+                width: 4px;
+                aspect-ratio: 1;
+                background-color: #fff;
+                border-radius: 50%;
+
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+            }
+        }
+    }
+
+    &__btn {
+        img {
+            width: 17px;
+            height: 17px;
+        }
+    }
+}
