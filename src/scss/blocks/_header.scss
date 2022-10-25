@@ -120,6 +120,7 @@
         @media (any-hover: hover) {
             transition: color .3s;
             position: relative;
+            isolation: isolate;
 
             &::after {
                 content: '';
@@ -133,6 +134,7 @@
 
                 position: absolute;
                 bottom: 0;
+                z-index: -1;
             }
         }
     }

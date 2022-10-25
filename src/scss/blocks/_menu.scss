@@ -160,9 +160,9 @@
     }
 
     &__link {
-        transition: color .3s;
-
         @media (any-hover: hover) and (min-width: 700px) {
+            isolation: isolate;
+            transition: color .3s;
             position: relative;
 
             &::after {
@@ -177,6 +177,7 @@
 
                 position: absolute;
                 bottom: 0;
+                z-index: -1;
             }
 
             &:hover {
