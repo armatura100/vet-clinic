@@ -1,0 +1,123 @@
+@use '../global/vars' as *;
+
+.services-slider {
+    margin-bottom: 210px;
+
+    &__title {
+        margin-bottom: 80px;
+    }
+
+    &__cards-wrapper {
+        position: relative;
+    }
+
+    &__cards {
+        max-width: 1223px;
+
+        .swiper-wrapper {}
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    .swiper-button-prev {
+        left: 0;
+    }
+
+    .swiper-button-next {
+        right: 0;
+
+        img {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__card-wrapper {
+        height: 215px;
+
+        &.swiper-slide-active {
+            .services-slider__card {
+                height: 100%;
+                border-radius: 5px 5px 0 0;
+                border-bottom: none;
+                padding-bottom: 45px;
+            }
+        }
+    }
+
+    &__card {
+        padding: 30px;
+        text-align: center;
+        height: 200px;
+
+        background-color: #FFF;
+        border: 1px solid #F3F3F3;
+        border-radius: 5px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: .3s;
+    }
+
+    &__card-img {
+        margin-inline: auto;
+    }
+
+    &__card-title {
+        font-weight: 500;
+        font-size: 18px;
+        color: $dark-color;
+    }
+
+    &__display {
+        max-width: 1223px;
+    }
+}
+
+.slide-article {
+    padding: 42px 35px;
+    display: flex;
+    align-items: center;
+    column-gap: 67px;
+    border-radius: 0px 5px 5px 5px;
+    background-color: #fff;
+
+    &__content {
+        flex-basis: 492px;
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 524px;
+        object-fit: cover;
+        border-radius: 5px;
+        aspect-ratio: 16 / 10;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 36px;
+        color: $dark-color;
+        margin-bottom: .5em;
+    }
+
+    &__text {
+        margin-bottom: 34px;
+
+        p:not(:last-child) {
+            margin-bottom: 9px;
+        }
+    }
+}
+
+
+.swiper-slide-thumb-active > div {
+    background-color: red;
+}

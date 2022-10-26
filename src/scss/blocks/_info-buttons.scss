@@ -1,0 +1,44 @@
+@use '../global/vars' as *;
+
+.info-buttons {
+    display: inline-flex;
+    column-gap: 20px;
+}
+
+.info-button {
+    display: flex;
+    column-gap: 6px;
+    padding: 15px 37px;
+
+    span {
+        white-space: nowrap;
+    }
+}
+
+.info-button--accent {
+    @extend %btn-accent;
+
+    &:hover {
+        path {
+            fill: $accent-color;
+        }
+    }
+
+    path {
+        transition: fill .3s;
+    }
+}
+
+.info-button--dark {
+    @extend %btn-dark;
+
+    &:hover {
+        path {
+            fill: $dark-color;
+        }
+    }
+
+    path {
+        transition: fill .3s;
+    }
+}

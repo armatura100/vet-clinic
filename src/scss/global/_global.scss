@@ -11,6 +11,10 @@ body {
     font-weight: 400;
     color: $text-color;
 
+    background-image: url('../img/bg.svg');
+    background-size: cover;
+    background-position: center;
+
     &.lock {
         overflow: hidden;
     }
@@ -26,4 +30,32 @@ body {
     grid-template-rows: auto 1fr auto;
     min-height: 100%;
     overflow-x: hidden;
+}
+
+.page-title {
+    font-size: clamp(2rem, 1.255rem + 3.73vw, 4.375rem);
+    font-weight: 700;
+    line-height: 1;
+    color: $dark-color;
+    margin-block: 118px 25px;
+
+    .blue {
+        color: #78C0DE;
+    }
+}
+
+.page-text {
+    max-width: 447px;
+    margin-bottom: 38px;
+
+    @media (max-width: 700px) {
+        color: darken($text-color, 30%);
+    }
+}
+
+.section-title {
+    font-size: clamp(2.25rem, 2.015rem + 1.18vw, 3rem); // 48 to 36
+    font-weight: 700;
+    text-align: center;
+    color: $dark-color;
 }

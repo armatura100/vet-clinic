@@ -21,3 +21,42 @@ $base-font-size: 16;
 $text-color: #949494;
 $accent-color: #FFBD54;
 $dark-color: #333;
+
+// z-index
+$z-header: 2;
+$z-menu__list: -1;
+$z-menu__link-line: -1;
+$z-header__question-line: -1;
+$z-care-decor: -1;
+$z-emailing__img: -1;
+
+// extends
+%btn-dark {
+    font-weight: 500;
+    color: #fff;
+    background-color: $dark-color;
+    border-radius: 3px;
+    transition: background-color .3s, color .3s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $accent-color;
+            color: $dark-color;
+        }
+    }
+}
+
+%btn-accent {
+    font-weight: 500;
+    color: #fff;
+    border-radius: 3px;
+    background-color: $accent-color;
+    transition: background-color .3s, color .3s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $dark-color;
+            color: $accent-color;
+        }
+    }
+}

@@ -1,12 +1,19 @@
 @use 'global/fonts';
 @use 'global/reset';
+@use 'global/libs';
 @use 'global/global';
 
 @use 'blocks/address';
 @use 'blocks/phone-list';
 @use 'blocks/phones-mobile';
 @use 'blocks/schedule';
+@use 'blocks/info-buttons';
+@use 'blocks/article-card';
 
 @use 'blocks/header';
 @use 'blocks/menu';
+@use 'blocks/care';
+@use 'blocks/services-slider';
+@use 'blocks/emailing';
+@use 'blocks/related-slider';
 @use 'blocks/footer';

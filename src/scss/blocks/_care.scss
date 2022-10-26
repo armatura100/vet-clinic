@@ -1,0 +1,120 @@
+@use '../global/vars' as *;
+
+.care {
+    margin-bottom: clamp(5rem, 2.451rem + 12.75vw, 13.125rem);
+    overflow-x: hidden;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 80px;
+    }
+
+    &__img {
+        margin-left: -280px;
+        margin-top: -100px;
+        width: 70%;
+
+        @media (max-width: 1040px) {
+            display: none;
+        }
+    }
+
+    &__title {
+        margin-top: 80px;
+    }
+
+    &__text {
+        max-width: 500px;
+    }
+
+    &__button {
+        @extend %btn-dark;
+        display: inline-block;
+        padding: 15px 47px;
+    }
+
+    &__img-decor {
+        position: absolute;
+        right: -175px;
+        bottom: -90px;
+        z-index: $z-care-decor;
+
+        @media (max-width: 1040px) {
+            bottom: -180px;
+        }
+
+        @media (max-width: 700px) {
+            opacity: 0.5;
+        }
+    }
+
+    &__quote {
+        font-size: clamp(1.125rem, 1.086rem + 0.2vw, 1.25rem);
+        text-align: center;
+        max-width: 753px;
+        margin-inline: auto;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 42px;
+
+            background-image: url('../img/care/brackets.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            position: absolute;
+
+            @media (max-width: 1000px) {
+                display: none;
+            }
+        }
+
+        &::before {
+            transform: rotate(180deg);
+            left: -107px;
+            top: 11px;
+        }
+
+        &::after {
+            right: -95px;
+            top: 80px;
+        }
+    }
+
+    &__quote-text {
+        padding-block: clamp(1.875rem, 1.62rem + 1.27vw, 2.688rem) clamp(1.875rem, 1.777rem + 0.49vw, 2.188rem);
+        margin-bottom: clamp(1.25rem, 0.956rem + 1.47vw, 2.188rem);
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            width: 140px;
+            height: 1px;
+            background-color: #DBDBDB;
+
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+    }
+
+    &__quote-author {
+        font-weight: 500;
+        color: $dark-color;
+    }
+}

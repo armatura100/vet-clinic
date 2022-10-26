@@ -1,0 +1,31 @@
+@use '../global/vars' as *;
+
+
+.related-slider {
+
+
+    &__body {
+        min-width: 100%;
+    }
+
+    .swiper-wrapper {
+        min-width: 100%;
+    }
+
+    &__controls {}
+
+    &__buttons {}
+}
+
+.section-title {}
+
+.swiper {}
+
+
+.swiper-slide {}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}
+
+.swiper-pagination {}

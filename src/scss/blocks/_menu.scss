@@ -109,7 +109,7 @@
         @media (max-width: 700px) {
             position: fixed;
             inset: 0;
-            z-index: 1;
+            z-index: $z-menu__list;
 
             padding-block: 120px 20px;
             background-color: $accent-color;
@@ -161,9 +161,9 @@
 
     &__link {
         @media (any-hover: hover) and (min-width: 700px) {
-            isolation: isolate;
             transition: color .3s;
             position: relative;
+            isolation: isolate;
 
             &::after {
                 content: '';
@@ -177,7 +177,7 @@
 
                 position: absolute;
                 bottom: 0;
-                z-index: -1;
+                z-index: $z-menu__link-line;
             }
 
             &:hover {
